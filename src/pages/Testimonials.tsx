@@ -6,14 +6,14 @@ import TestimonialCard from "@/components/cards/TestimonialCard";
 import { CheckCircle } from "lucide-react";
 
 const testimonials = [
-  { quote: "Magnify Services gave my mother a second home. The caregivers treat her with such warmth and dignity — we couldn't ask for more.", name: "Adebayo Oluwa", relationship: "Son of Resident" },
-  { quote: "The level of professionalism and genuine compassion at this facility is unmatched. Our family has complete peace of mind.", name: "Grace Nwachukwu", relationship: "Daughter of Resident" },
-  { quote: "From the moment we walked in, we knew this was the right place. The staff goes above and beyond every single day.", name: "Samuel Okafor", relationship: "Family Member" },
-  { quote: "My brother has thrived since joining Magnify Services. The personalized care plan has made a world of difference.", name: "Chioma Eze", relationship: "Sister of Resident" },
-  { quote: "We were worried about finding the right care for our father. Magnify Services exceeded every expectation we had.", name: "Funke Adeyemi", relationship: "Daughter of Resident" },
-  { quote: "The communication from the team is outstanding. We're always informed and involved in our mother's care journey.", name: "Tunde Bakare", relationship: "Son of Resident" },
-  { quote: "What sets Magnify apart is the genuine love and attention each resident receives. It's not just a facility — it's a family.", name: "Amara Obi", relationship: "Niece of Resident" },
-  { quote: "I recommend Magnify Services to everyone. Their dedication to quality care is evident in everything they do.", name: "Ibrahim Musa", relationship: "Brother of Resident" },
+  { quote: "Finding the right place for my father was not easy, but Magnify Services Inc. gave us peace of mind from day one. The environment is warm, safe, and welcoming, and the caregivers treat him like family. We finally feel confident he’s in the right hands", name: "Mrs. Johnson", relationship: "Daughter of Resident" },
+  { quote: "Living at Magnify Services has been a blessing. I feel respected, cared for, and supported every day. The staff are patient and kind, and they make this place truly feel like home.", name: "James K", relationship: "Resident" },
+  { quote: "Before Magnify, my sister struggled with consistent care. Since moving here, we’ve seen a complete transformation—she’s happier, healthier, and more engaged. The team genuinely cares, and it shows in everything they do", name: "Angela M.", relationship: "Family Member" },
+  { quote: "As a healthcare provider, I’ve worked with several care homes, and Magnify Services Inc. stands out for their professionalism and attention to detail. Their staff are well-trained, attentive, and deeply committed to the well-being of their residents", name: " Dr. Williams", relationship: "Healthcare Partner" },
+  { quote: "Magnify Services goes beyond basic care—they create a supportive and structured environment where residents can thrive. Communication with families is excellent, and their dedication is unmatched.", name: "David O", relationship: "Legal Guardian" },
+  { quote: "A safe home, a caring team, and real peace of mind", name: "Family Review", relationship: "" },
+  { quote: "They treat every resident with dignity and respect.", name: "Client Feedback", relationship: "" },
+  { quote: "Placing a loved one in care is never easy, but Magnify Services made that transition feel right. They didn’t just accept my mother—they embraced her. The love, patience, and attention they show every day mean everything to our family.", name: "Family Testimonial", relationship: "" },
 ];
 
 export default function Testimonials() {
