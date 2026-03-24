@@ -142,12 +142,12 @@ export default function Contact() {
       </section>
 
       {/* Map */}
-      <section ref={mapAnim.ref} className="pb-0">
+      <section ref={mapAnim.ref} className="section-padding-sm">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={mapAnim.isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="container mb-0"
+          className="container"
         >
           <div className="bg-secondary rounded-2xl h-[400px] flex items-center justify-center overflow-hidden">
             <div className="text-center">

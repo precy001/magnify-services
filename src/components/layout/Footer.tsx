@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
 import { CONTACT, NAV_LINKS, SERVICES } from "@/lib/constants";
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -22,23 +23,27 @@ export default function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-accent-foreground font-bold text-lg">
-                M
-              </div>
-              <span className="font-heading font-bold text-lg text-white">
-                Magnify Services
-              </span>
+              <img
+                src={logo}
+                alt="Magnify Services logo"
+                className="h-10 w-auto object-contain brightness-0 invert"
+              />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
               Providing specialized adult foster care for individuals who deserve comfort, respect, and a place to call home.
             </p>
             <div className="flex gap-3">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
+              {[
+                { Icon: Facebook, label: "Facebook" },
+                { Icon: Twitter, label: "Twitter" },
+                { Icon: Instagram, label: "Instagram" },
+                { Icon: Linkedin, label: "LinkedIn" },
+              ].map(({ Icon, label }) => (
                 <a
-                  key={i}
+                  key={label}
                   href="#"
                   className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-300"
-                  aria-label="Social media"
+                  aria-label={label}
                 >
                   <Icon size={16} />
                 </a>
