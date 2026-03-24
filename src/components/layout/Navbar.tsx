@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -19,6 +20,12 @@ export default function Navbar() {
     setMobileOpen(false);
   }, [location.pathname]);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -28,13 +35,12 @@ export default function Navbar() {
       }`}
     >
       <nav className="container flex items-center justify-between h-20">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-accent-foreground font-bold text-lg transition-transform duration-300 group-hover:scale-105">
-            M
-          </div>
-          <span className="font-heading font-bold text-lg text-primary">
-            Magnify Services
-          </span>
+        <Link to="/" className="flex items-center gap-2 group shrink-0">
+          <img
+            src={logo}
+            alt="Magnify Services logo"
+            className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          />
         </Link>
 
         {/* Desktop Nav */}
