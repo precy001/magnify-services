@@ -17,10 +17,10 @@ const services = [
 ];
 
 const testimonials = [
-  { quote: "Magnify Services gave my mother a second home. The caregivers treat her with such warmth and dignity — we couldn't ask for more.", name: "Adebayo Oluwa", relationship: "Son of Resident" },
-  { quote: "The level of professionalism and genuine compassion at this facility is unmatched. Our family has complete peace of mind.", name: "Grace Nwachukwu", relationship: "Daughter of Resident" },
-  { quote: "From the moment we walked in, we knew this was the right place. The staff goes above and beyond every single day.", name: "Samuel Okafor", relationship: "Family Member" },
-  { quote: "My brother has thrived since joining Magnify Services. The personalized care plan has made a world of difference.", name: "Chioma Eze", relationship: "Sister of Resident" },
+  { quote: "Finding the right place for my father was not easy, but Magnify Services Inc. gave us peace of mind from day one. The environment is warm, safe, and welcoming, and the caregivers treat him like family. We finally feel confident he’s in the right hands.", name: "Mrs. Johnson", relationship: "Daughter of Resident" },
+  { quote: "Living at Magnify Services has been a blessing. I feel respected, cared for, and supported every day. The staff are patient and kind, and they make this place truly feel like home.", name: "James K", relationship: "Resident" },
+  { quote: "Before Magnify, my sister struggled with consistent care. Since moving here, we’ve seen a complete transformation—she’s happier, healthier, and more engaged. The team genuinely cares, and it shows in everything they do", name: "Angela M", relationship: "Family Member" },
+  { quote: "As a healthcare provider, I’ve worked with several care homes, and Magnify Services Inc. stands out for their professionalism and attention to detail. Their staff are well-trained, attentive, and deeply committed to the well-being of their residents", name: "Dr. Williams", relationship: "Healthcare Patner" },
 ];
 
 export default function Home() {
@@ -138,13 +138,10 @@ export default function Home() {
               animate={missionAnim.isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              <span className="label-accent text-accent mb-3 block">Our Mission</span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">A Home Built on Love</h2>
+              <span className="label-accent text-accent mb-3 block">Mission Statement</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">A Place of Safety and Support</h2>
               <p className="text-body leading-relaxed mb-4">
-                At Magnify Services, we believe every individual deserves to live with dignity, comfort, and genuine care. Our mission is to create a nurturing environment that feels like home.
-              </p>
-              <p className="text-body leading-relaxed">
-                We go beyond basic care to build meaningful connections, foster independence, and enrich the lives of every resident in our community.
+                To deliver structured, person-centered adult foster care services that promote safety, stability, and improved quality of life. Magnify Services is committed to upholding the highest standards of care through professional excellence, accountability, and continuous support tailored to the unique needs of each individual.
               </p>
             </motion.div>
           </div>
@@ -155,10 +152,10 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="order-2 md:order-1"
             >
-              <span className="label-accent text-accent mb-3 block">Our Values</span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Guided by Compassion</h2>
+              <span className="label-accent text-accent mb-3 block">Vision Statement</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">A vision of Trusted Care</h2>
               <p className="text-body leading-relaxed mb-4">
-                Transparency, accountability, and community form the foundation of everything we do. We hold ourselves to the highest standards of care.
+                To establish Magnify Services as a trusted leader in adult foster care, recognized for operational excellence, quality service delivery, and measurable impact in enhancing the well-being and independence of the individuals we serve.
               </p>
               <Link to="/about" className="inline-flex items-center gap-2 text-accent font-medium hover:gap-3 transition-all duration-300">
                 Learn more about us <ArrowRight size={16} />
