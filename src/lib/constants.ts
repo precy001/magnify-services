@@ -1,8 +1,13 @@
+import service01 from "../assets/service01.jpg";
+import service02 from "../assets/service02.jpg";
+import service03 from "../assets/service03.jpg";
+import service04 from "../assets/service04.jpg";
+
 export const CONTACT = {
-  phones: ["09162542339", "07058627176", "07011797979"],
-  emails: ["iyiadeboluwatife8@gmail.com", "sammikee2020@gmail.com"],
-  address: "123 Care Avenue, Lagos, Nigeria",
-  hours: "Monday–Saturday: 9:00 AM – 5:00 PM",
+  phones: ["517-489-2729"],
+  emails: ["magnifyservicesinc@gmail.com"],
+  address: "1726 Teel Ave, Lansing MI 48910",
+  hours: "Open 24/7 for your convenience",
 };
 
 export const NAV_LINKS = [
@@ -28,6 +33,7 @@ export const SERVICES = [
       "Recreational and therapeutic activities",
       "Family coordination and progress reporting",
     ],
+    image: service01,
   },
   {
     id: "mental-health",
@@ -41,6 +47,7 @@ export const SERVICES = [
       "Structured daily routines and activities",
       "Crisis intervention and de-escalation",
     ],
+    image: service02,
   },
   {
     id: "aging",
@@ -54,6 +61,7 @@ export const SERVICES = [
       "Nutritional meal planning and preparation",
       "Coordination with healthcare providers",
     ],
+    image: service03,
   },
   {
     id: "physical",
@@ -67,5 +75,6 @@ export const SERVICES = [
       "Personal care and daily living support",
       "Transportation and mobility assistance",
     ],
+    image: service04,
   },
 ];

@@ -24,7 +24,7 @@ const objectives = [
 ];
 
 const milestones = [
-  { year: "2010", title: "Founded", desc: "Magnify Services was established with a vision to transform adult foster care." },
+  { year: "2004", title: "Founded", desc: "Magnify Services was established with a vision to transform adult foster care." },
   { year: "2013", title: "First Expansion", desc: "Opened our second care facility to serve more individuals in need." },
   { year: "2016", title: "Mental Health Program", desc: "Launched specialized care programs for individuals with mental health challenges." },
   { year: "2019", title: "50+ Staff", desc: "Grew our team of trained caregivers to over 50 dedicated professionals." },
@@ -58,9 +58,8 @@ export default function About() {
               <span className="label-accent text-accent mb-3 block">Background</span>
               <h2 className="text-3xl font-bold mb-6">How We Began</h2>
               <div className="space-y-4 text-body leading-relaxed">
-                <p>Magnify Services was born from a deeply personal experience — watching a loved one struggle to find compassionate, high-quality adult foster care. That experience ignited a passion to create something better.</p>
-                <p>Founded in 2010, we started with a single facility and a small team of dedicated caregivers. Our philosophy was simple: treat every resident the way we would want our own family members to be treated.</p>
-                <p>Over the years, we've grown into a trusted name in adult foster care, serving hundreds of individuals across multiple specialized programs. But our core values remain unchanged — compassion, dignity, and an unwavering commitment to excellence.</p>
+                <p>This organization was established in February 2004 to provide Adult Foster Care services to the less privileged and those in need of help in and around the Lansing community of Michigan. We started with a single facility and a small, dedicated team of caregivers, united by one simple philosophy: treat every resident the way we would want our own family members to be treated.</p>
+                <p>Over the years, we have grown into a trusted name in adult foster care, serving hundreds of individuals across multiple specialized programs. Despite our growth, our core values remain unchanged — compassion, dignity, and an unwavering commitment to excellence. Every decision we make, every service we offer, is guided by the same principle that inspired our founding: to make a meaningful difference in the lives of those we serve.</p>
               </div>
             </motion.div>
             <motion.div
