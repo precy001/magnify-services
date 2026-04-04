@@ -7,6 +7,7 @@ import ImagePlaceholder from "@/components/sections/ImagePlaceholder";
 import CTABanner from "@/components/sections/CTABanner";
 import { SERVICES } from "@/lib/constants";
 
+
 export default function Services() {
   return (
     <>
@@ -34,7 +35,15 @@ export default function Services() {
                     transition={{ duration: 0.7 }}
                     className={!isEven ? "md:order-2" : ""}
                   >
-                    <ImagePlaceholder aspect="aspect-[4/3]" />
+                    {service.image ? (
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="aspect-[4/3] w-full object-cover rounded-lg"
+                      />
+                    ) : (
+                      <ImagePlaceholder aspect="aspect-[4/3]" />
+                    )}
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, x: isEven ? 24 : -24 }}

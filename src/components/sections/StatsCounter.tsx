@@ -3,10 +3,10 @@ import { useCountUp } from "@/hooks/useCountUp";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: 500, suffix: "+", label: "Residents Cared For" },
-  { value: 15, suffix: "+", label: "Years of Service" },
-  { value: 50, suffix: "+", label: "Trained Caregivers" },
-  { value: 98, suffix: "%", label: "Family Satisfaction Rate" },
+  { value: 18, suffix: "+", label: "Residents Cared For" },
+  { value: 2, suffix: "+", label: "Years of Service" },
+  { value: 13, suffix: "+", label: "Trained Caregivers" },
+  { value: 100, suffix: "%", label: "Family Satisfaction Rate" },
 ];
 
 function StatItem({ value, suffix, label, inView, delay }: {
