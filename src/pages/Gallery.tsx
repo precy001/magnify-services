@@ -138,9 +138,13 @@ export default function Gallery() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-4xl aspect-[4/3] bg-secondary rounded-2xl flex items-center justify-center"
+              className="w-full max-w-4xl aspect-[4/3] bg-secondary rounded-2xl flex items-center justify-center overflow-hidden"
             >
-              <Image size={64} className="text-muted-foreground/30" />
+              {images[currentIndex]?.src ? (
+                <img src={images[currentIndex].src} alt="Gallery" className="w-full h-full object-cover" />
+              ) : (
+                <Image size={64} className="text-muted-foreground/30" />
+              )}
             </motion.div>
             <button
               className="absolute right-4 md:right-8 text-white/70 hover:text-white transition-colors"
