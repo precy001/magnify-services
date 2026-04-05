@@ -163,7 +163,7 @@ export default function Contact() {
               <div key={loc.name} className="rounded-2xl overflow-hidden shadow-md">
                 <iframe
                   title={`Map - ${loc.name}`}
-                  src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(loc.address)}`}
+                  src={`https://www.openstreetmap.org/export/embed.html?bbox=${encodeURIComponent(loc.bbox)}&layer=mapnik&marker=${encodeURIComponent(loc.marker)}`}
                   className="w-full h-[250px] border-0"
                   allowFullScreen
                   loading="lazy"
