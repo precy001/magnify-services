@@ -9,10 +9,10 @@ export const CONTACT = {
   licenseName: "Magnify Services Inc",
   hours: "Open 24/7 for your convenience",
   locations: [
-    { name: "Magnify AFC", address: "1726 Teel Ave, Lansing MI 48920" },
-    { name: "Glorify AFC", address: "1726 Teel Ave, Lansing MI 48910" },
-    { name: "Mercy AFC", address: "832 Pierce Rd, Lansing MI 48910" },
-    { name: "Uplift AFC", address: "4632 Hughes Rd, Lansing MI 48910" },
+    { name: "Magnify AFC", address: "1726 Teel Ave, Lansing MI 48920", lat: 42.7145, lng: -84.5565 },
+    { name: "Glorify AFC", address: "1726 Teel Ave, Lansing MI 48910", lat: 42.7145, lng: -84.5565 },
+    { name: "Mercy AFC", address: "832 Pierce Rd, Lansing MI 48910", lat: 42.7080, lng: -84.5230 },
+    { name: "Uplift AFC", address: "4632 Hughes Rd, Lansing MI 48910", lat: 42.6920, lng: -84.5150 },
   ],
   address: "1726 Teel Ave, Lansing MI 48910",
 };

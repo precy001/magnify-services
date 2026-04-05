@@ -101,10 +101,12 @@ export default function Footer() {
                   <a href={`mailto:${e}`} className="hover:text-accent transition-colors break-all">{e}</a>
                 </li>
               ))}
-              <li className="flex items-start gap-2 text-white/60 text-sm">
-                <MapPin size={14} className="text-accent shrink-0 mt-0.5" />
-                <span>{CONTACT.address}</span>
-              </li>
+              {CONTACT.locations.map((loc) => (
+                <li key={loc.name} className="flex items-start gap-2 text-white/60 text-sm">
+                  <MapPin size={14} className="text-accent shrink-0 mt-0.5" />
+                  <span><span className="text-white/80 font-medium">{loc.name}</span> — {loc.address}</span>
+                </li>
+              ))}
             </ul>
 
             <h4 className="text-white font-semibold text-sm mb-3">Newsletter</h4>
