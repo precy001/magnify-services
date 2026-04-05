@@ -3,14 +3,25 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import SectionHero from "@/components/sections/SectionHero";
 import { Image, Play, X, ChevronLeft, ChevronRight } from "lucide-react";
+import facilityImg1 from "@/assets/gallery/facility-1.jpeg";
 
 const filters = ["All", "Facility", "Activities", "Events", "Programs"];
 
-const galleryItems = Array.from({ length: 12 }, (_, i) => ({
-  id: i + 1,
-  category: filters[1 + (i % 4)],
-  type: i === 2 || i === 7 ? "video" as const : "image" as const,
-}));
+interface GalleryItem {
+  id: number;
+  category: string;
+  type: "image" | "video";
+  src?: string;
+}
+
+const galleryItems: GalleryItem[] = [
+  { id: 1, category: "Facility", type: "image", src: facilityImg1 },
+  ...Array.from({ length: 11 }, (_, i) => ({
+    id: i + 2,
+    category: filters[1 + ((i + 1) % 4)],
+    type: (i + 1 === 2 || i + 1 === 7 ? "video" : "image") as "image" | "video",
+  })),
+];
 
 export default function Gallery() {
   const [filter, setFilter] = useState("All");
@@ -70,7 +81,11 @@ export default function Gallery() {
                 onClick={() => setLightbox(item.id)}
                 className="aspect-square bg-secondary rounded-xl flex items-center justify-center hover:shadow-md transition-shadow cursor-pointer overflow-hidden group"
               >
-                <Image size={32} className="text-muted-foreground/30 group-hover:scale-110 transition-transform duration-300" />
+                {item.src ? (
+                  <img src={item.src} alt={`Gallery ${item.category}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                ) : (
+                  <Image size={32} className="text-muted-foreground/30 group-hover:scale-110 transition-transform duration-300" />
+                )}
               </motion.button>
             ))}
           </motion.div>
@@ -123,9 +138,13 @@ export default function Gallery() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-4xl aspect-[4/3] bg-secondary rounded-2xl flex items-center justify-center"
+              className="w-full max-w-4xl aspect-[4/3] bg-secondary rounded-2xl flex items-center justify-center overflow-hidden"
             >
-              <Image size={64} className="text-muted-foreground/30" />
+              {images[currentIndex]?.src ? (
+                <img src={images[currentIndex].src} alt="Gallery" className="w-full h-full object-cover" />
+              ) : (
+                <Image size={64} className="text-muted-foreground/30" />
+              )}
             </motion.div>
             <button
               className="absolute right-4 md:right-8 text-white/70 hover:text-white transition-colors"
