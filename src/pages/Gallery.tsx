@@ -3,14 +3,25 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import SectionHero from "@/components/sections/SectionHero";
 import { Image, Play, X, ChevronLeft, ChevronRight } from "lucide-react";
+import facilityImg1 from "@/assets/gallery/facility-1.jpeg";
 
 const filters = ["All", "Facility", "Activities", "Events", "Programs"];
 
-const galleryItems = Array.from({ length: 12 }, (_, i) => ({
-  id: i + 1,
-  category: filters[1 + (i % 4)],
-  type: i === 2 || i === 7 ? "video" as const : "image" as const,
-}));
+interface GalleryItem {
+  id: number;
+  category: string;
+  type: "image" | "video";
+  src?: string;
+}
+
+const galleryItems: GalleryItem[] = [
+  { id: 1, category: "Facility", type: "image", src: facilityImg1 },
+  ...Array.from({ length: 11 }, (_, i) => ({
+    id: i + 2,
+    category: filters[1 + ((i + 1) % 4)],
+    type: (i + 1 === 2 || i + 1 === 7 ? "video" : "image") as "image" | "video",
+  })),
+];
 
 export default function Gallery() {
   const [filter, setFilter] = useState("All");
