@@ -61,9 +61,17 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-primary text-sm mb-3 flex items-center gap-2">
-                    <MapPin size={16} className="text-accent" /> Address
+                    <MapPin size={16} className="text-accent" /> Our Locations
                   </h4>
-                  <p className="text-body text-sm ml-6">{CONTACT.address}</p>
+                  <ul className="space-y-2 ml-6">
+                    {CONTACT.locations.map((loc) => (
+                      <li key={loc.name} className="text-sm">
+                        <span className="font-medium text-primary">{loc.name}</span>
+                        <span className="text-body"> — {loc.address}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-xs text-muted-foreground mt-3 ml-6">Licensed under: {CONTACT.licenseName}</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-primary text-sm mb-3 flex items-center gap-2">
