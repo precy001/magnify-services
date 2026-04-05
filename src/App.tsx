@@ -9,7 +9,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Consultation from "./pages/Consultation";
 import Testimonials from "./pages/Testimonials";
-import Team from "./pages/Team";
+
 import Projects from "./pages/Projects";
 import Donate from "./pages/Donate";
 import Gallery from "./pages/Gallery";
