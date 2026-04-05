@@ -6,8 +6,15 @@ import service04 from "../assets/service04.jpg";
 export const CONTACT = {
   phones: ["517-489-2729"],
   emails: ["magnifyservicesinc@gmail.com"],
-  address: "1726 Teel Ave, Lansing MI 48910",
+  licenseName: "Magnify Services Inc",
   hours: "Open 24/7 for your convenience",
+  locations: [
+    { name: "Magnify AFC", address: "1726 Teel Ave, Lansing MI 48920" },
+    { name: "Glorify AFC", address: "1726 Teel Ave, Lansing MI 48910" },
+    { name: "Mercy AFC", address: "832 Pierce Rd, Lansing MI 48910" },
+    { name: "Uplift AFC", address: "4632 Hughes Rd, Lansing MI 48910" },
+  ],
+  address: "1726 Teel Ave, Lansing MI 48910",
 };
 
 export const NAV_LINKS = [

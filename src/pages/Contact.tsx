@@ -157,11 +157,24 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="container"
         >
-          <div className="bg-secondary rounded-2xl h-[400px] flex items-center justify-center overflow-hidden">
-            <div className="text-center">
-              <MapPin size={48} className="text-muted-foreground/30 mx-auto mb-3" />
-              <p className="text-muted-foreground text-sm">Map Loading...</p>
-            </div>
+          <h3 className="text-xl font-bold text-primary mb-6 text-center">Our Locations</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {CONTACT.locations.map((loc) => (
+              <div key={loc.name} className="rounded-2xl overflow-hidden shadow-md">
+                <iframe
+                  title={`Map - ${loc.name}`}
+                  src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(loc.address)}`}
+                  className="w-full h-[250px] border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <div className="bg-card p-4">
+                  <p className="font-semibold text-primary text-sm">{loc.name}</p>
+                  <p className="text-muted-foreground text-xs">{loc.address}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </motion.div>
       </section>
