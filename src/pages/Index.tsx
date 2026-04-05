@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Heart, Brain, Users, Accessibility, Play, ChevronDown, ArrowRight } from "lucide-react";
+import { Heart, Brain, Users, Accessibility, ChevronDown, ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import ServiceCard from "@/components/cards/ServiceCard";
 import TestimonialCard from "@/components/cards/TestimonialCard";
