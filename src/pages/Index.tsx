@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Heart, Brain, Users, Accessibility, Play, ChevronDown, ArrowRight } from "lucide-react";
+import { Heart, Brain, Users, Accessibility, ChevronDown, ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import ServiceCard from "@/components/cards/ServiceCard";
 import TestimonialCard from "@/components/cards/TestimonialCard";
@@ -87,11 +87,15 @@ export default function Home() {
             animate={videoAnim.isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <div className="relative aspect-video bg-secondary rounded-2xl overflow-hidden flex items-center justify-center group cursor-pointer shadow-lg">
-              <div className="w-20 h-20 rounded-full bg-accent/90 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Play size={32} className="text-accent-foreground ml-1" />
-              </div>
-            </div>
+            <video
+              className="w-full aspect-video rounded-2xl shadow-lg object-cover"
+              controls
+              preload="metadata"
+              poster=""
+            >
+              <source src="/videos/intro.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             <p className="text-center text-muted-foreground text-sm mt-6">
               Watch how Magnify Services is changing lives
             </p>
