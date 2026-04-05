@@ -81,7 +81,11 @@ export default function Gallery() {
                 onClick={() => setLightbox(item.id)}
                 className="aspect-square bg-secondary rounded-xl flex items-center justify-center hover:shadow-md transition-shadow cursor-pointer overflow-hidden group"
               >
-                <Image size={32} className="text-muted-foreground/30 group-hover:scale-110 transition-transform duration-300" />
+                {item.src ? (
+                  <img src={item.src} alt={`Gallery ${item.category}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                ) : (
+                  <Image size={32} className="text-muted-foreground/30 group-hover:scale-110 transition-transform duration-300" />
+                )}
               </motion.button>
             ))}
           </motion.div>
