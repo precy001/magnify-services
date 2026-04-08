@@ -4,7 +4,6 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import SectionHero from "@/components/sections/SectionHero";
 import { Image, Play, X, ChevronLeft, ChevronRight } from "lucide-react";
 import facilityImg1 from "@/assets/gallery/facility-1.jpeg";
-import facilityImg2 from "@/assets/gallery/3e1e6e62-c53a-4c6c-9ac5-9f848afd7131.jpeg";
 import facilityImg3 from "@/assets/gallery/6d9608b0-5bd7-4ca7-a9b1-eff7e7bb0336.jpeg";
 import facilityImg4 from "@/assets/gallery/6f138269-25b4-4a8e-b3c8-0b301c8b7707.jpeg";
 import facilityImg5 from "@/assets/gallery/7efc3d4a-d7e0-4f7d-92bc-d71f11f871d1.jpeg";
@@ -29,19 +28,18 @@ interface GalleryItem {
 
 const galleryItems: GalleryItem[] = [
   { id: 1, category: "Facility", type: "image", src: facilityImg1 },
-  { id: 1, category: "Facility", type: "image", src: facilityImg2 },
-  { id: 1, category: "Facility", type: "image", src: facilityImg3 },
-  { id: 1, category: "Facility", type: "image", src: facilityImg4 },
-  { id: 1, category: "Facility", type: "image", src: facilityImg5 },
-  { id: 1, category: "Facility", type: "image", src: facilityImg6 },
-  { id: 1, category: "Facility", type: "image", src: facilityImg7 },
-  { id: 1, category: "Facility", type: "image", src: facilityImg8 },
-  { id: 1, category: "Facility", type: "image", src: facilityImg9 },
-  { id: 1, category: "Facility", type: "image", src: facilityImg10 },
-  { id: 1, category: "Facility", type: "image", src: facilityImg11},
-  { id: 1, category: "Facility", type: "image", src: facilityImg12 },
-  { id: 1, category: "Facility", type: "image", src: facilityImg13 },
-  { id: 1, category: "Facility", type: "image", src: facilityImg14},
+  { id: 2, category: "Facility", type: "image", src: facilityImg3 },
+  { id: 3, category: "Facility", type: "image", src: facilityImg4 },
+  { id: 4, category: "Facility", type: "image", src: facilityImg5 },
+  { id: 5, category: "Facility", type: "image", src: facilityImg6 },
+  { id: 6, category: "Facility", type: "image", src: facilityImg7 },
+  { id: 7, category: "Facility", type: "image", src: facilityImg8 },
+  { id: 8, category: "Facility", type: "image", src: facilityImg9 },
+  { id: 9, category: "Facility", type: "image", src: facilityImg10 },
+  { id: 10, category: "Facility", type: "image", src: facilityImg11 },
+  { id: 11, category: "Facility", type: "image", src: facilityImg12 },
+  { id: 12, category: "Facility", type: "image", src: facilityImg13 },
+  { id: 13, category: "Facility", type: "image", src: facilityImg14 },
 ];
 
 export default function Gallery() {
