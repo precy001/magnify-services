@@ -97,7 +97,7 @@ export default function Home() {
               Your browser does not support the video tag.
             </video>
             <p className="text-center text-muted-foreground text-sm mt-6">
-              Watch how Magnify Services is changing lives
+              Watch how Magnify Services Inc is changing lives
             </p>
           </motion.div>
         </div>
