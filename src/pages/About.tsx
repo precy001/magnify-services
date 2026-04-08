@@ -24,7 +24,7 @@ const objectives = [
 ];
 
 const milestones = [
-  { year: "2004", title: "Founded", desc: "Magnify Services Inc was established with a vision to transform adult foster care." }, "Founded", desc: "Magnify Services Inc was established with a vision to transform adult foster care." }, with a vision to transform adult foster care." },
+  { year: "2004", title: "Founded", desc: "Magnify Services Inc was established with a vision to transform adult foster care." },
   { year: "2013", title: "First Expansion", desc: "Opened our second care facility to serve more individuals in need." },
   { year: "2016", title: "Mental Health Program", desc: "Launched specialized care programs for individuals with mental health challenges." },
   { year: "2019", title: "50+ Staff", desc: "Grew our team of trained caregivers to over 50 dedicated professionals." },
