@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-6">
               <img
                 src={logo}
-                alt="Magnify Services logo"
+                alt="Magnify Services Inc logo"
                 className="h-10 w-auto object-contain brightness-0 invert"
               />
             </div>
