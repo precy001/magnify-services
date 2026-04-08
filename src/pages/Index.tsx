@@ -145,7 +145,7 @@ export default function Home() {
               <span className="label-accent text-accent mb-3 block">Mission Statement</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">A Place of Safety and Support</h2>
               <p className="text-body leading-relaxed mb-4">
-                To deliver structured, person-centered adult foster care services that promote safety, stability, and improved quality of life. Magnify Services is committed to upholding the highest standards of care through professional excellence, accountability, and continuous support tailored to the unique needs of each individual.
+                To deliver structured, person-centered adult foster care services that promote safety, stability, and improved quality of life. Magnify Services Inc is committed to upholding the highest standards of care through professional excellence, accountability, and continuous support tailored to the unique needs of each individual.
               </p>
             </motion.div>
           </div>
