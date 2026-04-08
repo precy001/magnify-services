@@ -34,7 +34,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroBg} alt="Magnify Services care facility" className="w-full h-full object-cover" />
+          <img src={heroBg} alt="Magnify Services Inc care facility" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(213,35%,16%)] via-[hsl(213,35%,16%,0.5)] to-[hsl(213,35%,16%,0.3)]" />
         </div>
         <div className="relative container text-center z-10 pt-20">
