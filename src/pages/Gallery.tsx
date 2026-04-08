@@ -63,7 +63,7 @@ export default function Gallery() {
     <>
       <SectionHero
         title="Our Gallery"
-        subtitle="A glimpse into life at Magnify Services."
+        subtitle="A glimpse into life at Magnify Services Inc."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Gallery", href: "/gallery" }]}
       />
 

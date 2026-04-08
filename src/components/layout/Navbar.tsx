@@ -38,7 +38,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-2 group shrink-0">
           <img
             src={logo}
-            alt="Magnify Services logo"
+            alt="Magnify Services Inc logo"
             className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </Link>

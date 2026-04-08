@@ -87,7 +87,7 @@ export default function About() {
             <h2 className="text-3xl font-bold mb-8">Mission & Objectives</h2>
             <blockquote className="border-l-4 border-accent bg-card rounded-r-2xl p-8 mb-10 shadow-sm">
               <p className="text-lg text-primary font-medium italic leading-relaxed">
-                "To deliver structured, person-centered adult foster care services that promote safety, stability, and improved quality of life. Magnify Services is committed to upholding the highest standards of care through professional excellence, accountability, and continuous support tailored to the unique needs of each individual."
+                "To deliver structured, person-centered adult foster care services that promote safety, stability, and improved quality of life. "To deliver structured, person-centered adult foster care services that promote safety, stability, and improved quality of life. Magnify Services Inc is committed to upholding the highest standards of care through professional excellence, accountability, and continuous support tailored to the unique needs of each individual." the highest standards of care through professional excellence, accountability, and continuous support tailored to the unique needs of each individual."
               </p>
             </blockquote>
             <h3 className="text-xl font-semibold mb-6">Our Objectives</h3>

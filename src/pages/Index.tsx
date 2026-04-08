@@ -159,7 +159,7 @@ export default function Home() {
               <span className="label-accent text-accent mb-3 block">Vision Statement</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">A vision of Trusted Care</h2>
               <p className="text-body leading-relaxed mb-4">
-                To establish Magnify Services as a trusted leader in adult foster care, recognized for operational excellence, quality service delivery, and measurable impact in enhancing the well-being and independence of the individuals we serve.
+                To establish Magnify Services Inc as a trusted leader in adult foster care, recognized for operational excellence, quality service delivery, and measurable impact in enhancing the well-being and independence of the individuals we serve.
               </p>
               <Link to="/about" className="inline-flex items-center gap-2 text-accent font-medium hover:gap-3 transition-all duration-300">
                 Learn more about us <ArrowRight size={16} />
