@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-6">
               <img
                 src={logo}
-                alt="Magnify Services logo"
+                alt="Magnify Services Inc logo"
                 className="h-10 w-auto object-contain brightness-0 invert"
               />
             </div>
@@ -138,7 +138,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-xs">
-            © 2026 Magnify Services. All rights reserved.
+            © 2026 Magnify Services Inc. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-white/40 text-xs hover:text-accent transition-colors">Privacy Policy</a>

@@ -34,7 +34,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroBg} alt="Magnify Services care facility" className="w-full h-full object-cover" />
+          <img src={heroBg} alt="Magnify Services Inc care facility" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-[hsl(213,35%,16%)] via-[hsl(213,35%,16%,0.5)] to-[hsl(213,35%,16%,0.3)]" />
         </div>
         <div className="relative container text-center z-10 pt-20">
@@ -97,7 +97,7 @@ export default function Home() {
               Your browser does not support the video tag.
             </video>
             <p className="text-center text-muted-foreground text-sm mt-6">
-              Watch how Magnify Services is changing lives
+              Watch how Magnify Services Inc is changing lives
             </p>
           </motion.div>
         </div>
@@ -145,7 +145,7 @@ export default function Home() {
               <span className="label-accent text-accent mb-3 block">Mission Statement</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">A Place of Safety and Support</h2>
               <p className="text-body leading-relaxed mb-4">
-                To deliver structured, person-centered adult foster care services that promote safety, stability, and improved quality of life. Magnify Services is committed to upholding the highest standards of care through professional excellence, accountability, and continuous support tailored to the unique needs of each individual.
+                To deliver structured, person-centered adult foster care services that promote safety, stability, and improved quality of life. Magnify Services Inc is committed to upholding the highest standards of care through professional excellence, accountability, and continuous support tailored to the unique needs of each individual.
               </p>
             </motion.div>
           </div>
@@ -159,7 +159,7 @@ export default function Home() {
               <span className="label-accent text-accent mb-3 block">Vision Statement</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">A vision of Trusted Care</h2>
               <p className="text-body leading-relaxed mb-4">
-                To establish Magnify Services as a trusted leader in adult foster care, recognized for operational excellence, quality service delivery, and measurable impact in enhancing the well-being and independence of the individuals we serve.
+                To establish Magnify Services Inc as a trusted leader in adult foster care, recognized for operational excellence, quality service delivery, and measurable impact in enhancing the well-being and independence of the individuals we serve.
               </p>
               <Link to="/about" className="inline-flex items-center gap-2 text-accent font-medium hover:gap-3 transition-all duration-300">
                 Learn more about us <ArrowRight size={16} />
