@@ -60,7 +60,7 @@ export default function Testimonials() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl font-bold mb-3">Share Your Story</h2>
-            <p className="text-muted-foreground mb-8">Had an experience with Magnify Services? We'd love to hear from you.</p>
+            <p className="text-muted-foreground mb-8">Had an experience with Magnify Services Inc? We'd love to hear from you.</p>
           </motion.div>
 
           {storySubmitted ? (
