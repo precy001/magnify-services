@@ -9,7 +9,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ title, category, description }: ProjectCardProps) {
   return (
-    <div className="card-hover bg-card overflow-hidden group">
+    <div className="card-hover bg-card overflow-hidden group border border-border">
       <div className="aspect-video bg-secondary flex items-center justify-center">
         <Image size={48} className="text-muted-foreground/30" />
       </div>

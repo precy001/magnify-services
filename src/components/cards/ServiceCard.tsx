@@ -16,9 +16,9 @@ export default function ServiceCard({ icon: Icon, title, description, delay = 0,
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
-      className="bg-card p-8 card-hover group"
+      className="bg-card p-8 card-hover group border border-border"
     >
-      <div className="w-14 h-14 rounded-2xl bg-accent/20 flex items-center justify-center mb-6 group-hover:bg-accent/30 transition-colors duration-300">
+      <div className="w-14 h-14 rounded-lg bg-accent/15 flex items-center justify-center mb-6 group-hover:bg-accent/25 transition-colors duration-300">
         <Icon size={24} className="text-accent" />
       </div>
       <h3 className="text-lg font-semibold mb-3">{title}</h3>
