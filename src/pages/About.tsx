@@ -85,9 +85,9 @@ export default function About() {
           >
             <span className="label-accent text-accent mb-3 block">Our Mission</span>
             <h2 className="text-3xl font-bold mb-8">Mission & Objectives</h2>
-            <blockquote className="border-l-4 border-accent bg-card rounded-r-2xl p-8 mb-10 shadow-sm">
+            <blockquote className="border-l-4 border-accent bg-card rounded-r-lg p-8 mb-10 shadow-sm">
               <p className="text-lg text-primary font-medium italic leading-relaxed">
-                "To deliver structured, person-centered adult foster care services that promote safety, stability, and improved quality of life. "To deliver structured, person-centered adult foster care services that promote safety, stability, and improved quality of life. Magnify Services Inc is committed to upholding the highest standards of care through professional excellence, accountability, and continuous support tailored to the unique needs of each individual." the highest standards of care through professional excellence, accountability, and continuous support tailored to the unique needs of each individual."
+                "To deliver structured, person-centered adult foster care services that promote safety, stability, and improved quality of life. Magnify Services Inc is committed to upholding the highest standards of care through professional excellence, accountability, and continuous support tailored to the unique needs of each individual."
               </p>
             </blockquote>
             <h3 className="text-xl font-semibold mb-6">Our Objectives</h3>
@@ -128,9 +128,9 @@ export default function About() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={valuesAnim.isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: i * 0.08 }}
-                className="bg-card p-8 card-hover"
+                className="bg-card p-8 card-hover border border-border"
               >
-                <div className="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-5">
+                <div className="w-12 h-12 rounded-lg bg-accent/15 flex items-center justify-center mb-5">
                   <v.icon size={22} className="text-accent" />
                 </div>
                 <h3 className="font-semibold text-primary mb-2">{v.title}</h3>
@@ -165,7 +165,7 @@ export default function About() {
               >
                 <div className="hidden md:block w-1/2" />
                 <div className="absolute left-6 md:left-1/2 w-3 h-3 rounded-full bg-accent -translate-x-1.5 mt-2" />
-                <div className="ml-14 md:ml-0 md:w-1/2 bg-card p-6 rounded-2xl shadow-sm">
+                <div className="ml-14 md:ml-0 md:w-1/2 bg-card p-6 rounded-lg shadow-sm border border-border">
                   <span className="text-accent font-bold text-sm">{m.year}</span>
                   <h4 className="font-semibold text-primary mt-1">{m.title}</h4>
                   <p className="text-muted-foreground text-sm mt-1">{m.desc}</p>

@@ -82,7 +82,7 @@ export default function Contact() {
               </div>
 
               {/* Emergency Card */}
-              <div className="mt-10 bg-destructive/10 border border-destructive/20 rounded-2xl p-6 flex items-start gap-3">
+              <div className="mt-10 bg-destructive/10 border border-destructive/20 rounded-lg p-6 flex items-start gap-3">
                 <AlertTriangle size={20} className="text-destructive shrink-0 mt-0.5" />
                 <div>
                   <p className="font-semibold text-primary text-sm mb-1">Urgent Care Inquiries</p>
@@ -103,30 +103,30 @@ export default function Contact() {
               transition={{ duration: 0.7, delay: 0.1 }}
             >
               {submitted ? (
-                <div className="bg-success/10 border border-success/20 rounded-2xl p-12 text-center h-full flex flex-col items-center justify-center">
+                <div className="bg-success/10 border border-success/20 rounded-lg p-12 text-center h-full flex flex-col items-center justify-center">
                   <CheckCircle size={48} className="text-success mb-4" />
                   <h3 className="text-2xl font-bold text-primary mb-2">Message Sent!</h3>
                   <p className="text-muted-foreground">We'll get back to you within 24 hours.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="bg-card rounded-2xl shadow-md p-8 space-y-5">
+                <form onSubmit={handleSubmit} className="bg-card rounded-lg shadow-md p-8 space-y-5 border border-border">
                   <div>
                     <label className="text-sm font-medium text-primary mb-1.5 block">Full Name *</label>
-                    <input required className="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:ring-2 focus:ring-accent/50" value={form.name} onChange={(e) => setForm(f => ({ ...f, name: e.target.value }))} />
+                    <input required className="w-full px-4 py-3 rounded-md border border-border bg-secondary text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent/50" value={form.name} onChange={(e) => setForm(f => ({ ...f, name: e.target.value }))} />
                   </div>
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
                       <label className="text-sm font-medium text-primary mb-1.5 block">Email *</label>
-                      <input required type="email" className="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:ring-2 focus:ring-accent/50" value={form.email} onChange={(e) => setForm(f => ({ ...f, email: e.target.value }))} />
+                      <input required type="email" className="w-full px-4 py-3 rounded-md border border-border bg-secondary text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent/50" value={form.email} onChange={(e) => setForm(f => ({ ...f, email: e.target.value }))} />
                     </div>
                     <div>
                       <label className="text-sm font-medium text-primary mb-1.5 block">Phone</label>
-                      <input type="tel" className="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:ring-2 focus:ring-accent/50" value={form.phone} onChange={(e) => setForm(f => ({ ...f, phone: e.target.value }))} />
+                      <input type="tel" className="w-full px-4 py-3 rounded-md border border-border bg-secondary text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent/50" value={form.phone} onChange={(e) => setForm(f => ({ ...f, phone: e.target.value }))} />
                     </div>
                   </div>
                   <div>
                     <label className="text-sm font-medium text-primary mb-1.5 block">Subject</label>
-                    <select className="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:ring-2 focus:ring-accent/50" value={form.subject} onChange={(e) => setForm(f => ({ ...f, subject: e.target.value }))}>
+                    <select className="w-full px-4 py-3 rounded-md border border-border bg-secondary text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent/50" value={form.subject} onChange={(e) => setForm(f => ({ ...f, subject: e.target.value }))}>
                       <option value="">Select a topic</option>
                       <option value="general">General Inquiry</option>
                       <option value="service">Service Information</option>
@@ -137,7 +137,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <label className="text-sm font-medium text-primary mb-1.5 block">Message *</label>
-                    <textarea required className="w-full px-4 py-3 rounded-xl border border-border text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 min-h-[150px] resize-y" value={form.message} onChange={(e) => setForm(f => ({ ...f, message: e.target.value }))} />
+                    <textarea required className="w-full px-4 py-3 rounded-md border border-border bg-secondary text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 min-h-[150px] resize-y" value={form.message} onChange={(e) => setForm(f => ({ ...f, message: e.target.value }))} />
                   </div>
                   <button type="submit" className="btn-primary w-full text-base !py-4">
                     Send Message
@@ -160,7 +160,7 @@ export default function Contact() {
           <h3 className="text-xl font-bold text-primary mb-6 text-center">Our Locations</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {CONTACT.locations.map((loc) => (
-              <div key={loc.name} className="rounded-2xl overflow-hidden shadow-md">
+              <div key={loc.name} className="rounded-lg overflow-hidden shadow-md border border-border">
                 <iframe
                   title={`Map - ${loc.name}`}
                   src={`https://www.openstreetmap.org/export/embed.html?bbox=${loc.lng - 0.005}%2C${loc.lat - 0.003}%2C${loc.lng + 0.005}%2C${loc.lat + 0.003}&layer=mapnik&marker=${loc.lat}%2C${loc.lng}`}

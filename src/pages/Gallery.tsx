@@ -74,7 +74,7 @@ export default function Gallery() {
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-5 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   filter === f ? "bg-accent text-accent-foreground" : "bg-secondary text-secondary-foreground hover:bg-accent/20"
                 }`}
               >
@@ -98,7 +98,7 @@ export default function Gallery() {
                 animate={gridAnim.isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 onClick={() => setLightbox(item.id)}
-                className="aspect-square bg-secondary rounded-xl flex items-center justify-center hover:shadow-md transition-shadow cursor-pointer overflow-hidden group"
+                className="aspect-square bg-secondary rounded-lg flex items-center justify-center hover:shadow-md transition-shadow cursor-pointer overflow-hidden group"
               >
                 {item.src ? (
                   <img src={item.src} alt={`Gallery ${item.category}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
@@ -115,8 +115,8 @@ export default function Gallery() {
               <h3 className="text-xl font-semibold mb-6">Videos</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {videos.map((v) => (
-                  <div key={v.id} className="aspect-video bg-secondary rounded-xl flex items-center justify-center cursor-pointer group relative">
-                    <div className="w-14 h-14 rounded-full bg-accent/80 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div key={v.id} className="aspect-video bg-secondary rounded-lg flex items-center justify-center cursor-pointer group relative">
+                    <div className="w-14 h-14 rounded-md bg-accent/80 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Play size={24} className="text-accent-foreground ml-0.5" />
                     </div>
                   </div>
@@ -157,7 +157,7 @@ export default function Gallery() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-4xl aspect-[4/3] bg-secondary rounded-2xl flex items-center justify-center overflow-hidden"
+              className="w-full max-w-4xl aspect-[4/3] bg-secondary rounded-lg flex items-center justify-center overflow-hidden"
             >
               {images[currentIndex]?.src ? (
                 <img src={images[currentIndex].src} alt="Gallery" className="w-full h-full object-cover" />

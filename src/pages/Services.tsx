@@ -7,7 +7,6 @@ import ImagePlaceholder from "@/components/sections/ImagePlaceholder";
 import CTABanner from "@/components/sections/CTABanner";
 import { SERVICES } from "@/lib/constants";
 
-
 export default function Services() {
   return (
     <>
