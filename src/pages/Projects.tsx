@@ -84,7 +84,7 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={timelineAnim.isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="min-w-[200px] bg-card rounded-2xl p-6 shadow-sm snap-start text-center shrink-0"
+                className="min-w-[200px] bg-card rounded-lg p-6 shadow-sm snap-start text-center shrink-0 border border-border"
               >
                 <span className="text-accent font-bold text-lg">{m.year}</span>
                 <p className="text-muted-foreground text-sm mt-2">{m.desc}</p>

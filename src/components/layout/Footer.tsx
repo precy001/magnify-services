@@ -42,7 +42,7 @@ export default function Footer() {
                 <a
                   key={label}
                   href="#"
-                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-300"
+                  className="w-9 h-9 rounded-md bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-300"
                   aria-label={label}
                 >
                   <Icon size={16} />
@@ -120,11 +120,11 @@ export default function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email"
-                  className="flex-1 px-4 py-2.5 rounded-full bg-white/10 text-white text-sm placeholder:text-white/40 border border-white/10 focus:outline-none focus:border-accent transition-colors"
+                  className="flex-1 px-4 py-2.5 rounded-md bg-white/10 text-white text-sm placeholder:text-white/40 border border-white/10 focus:outline-none focus:border-accent transition-colors"
                 />
                 <button
                   type="submit"
-                  className="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-accent-foreground hover:scale-105 active:scale-95 transition-transform"
+                  className="w-10 h-10 rounded-md bg-accent flex items-center justify-center text-accent-foreground hover:scale-105 active:scale-95 transition-transform"
                   aria-label="Subscribe"
                 >
                   <Send size={16} />

@@ -34,7 +34,7 @@ export default function Consultation() {
   };
 
   const inputClass = (field: string) =>
-    `w-full px-4 py-3 rounded-xl border ${errors[field] ? "border-destructive" : "border-border"} bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all`;
+    `w-full px-4 py-3 rounded-md border ${errors[field] ? "border-destructive" : "border-border"} bg-secondary text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all`;
 
   return (
     <>
@@ -50,7 +50,7 @@ export default function Consultation() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="bg-success/10 border border-success/20 rounded-2xl p-12 text-center"
+              className="bg-success/10 border border-success/20 rounded-lg p-12 text-center"
             >
               <CheckCircle size={48} className="text-success mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-primary mb-2">Consultation Requested!</h3>
@@ -62,7 +62,7 @@ export default function Consultation() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               onSubmit={handleSubmit}
-              className="bg-card rounded-2xl shadow-md p-8 md:p-10 space-y-5"
+              className="bg-card rounded-lg shadow-md p-8 md:p-10 space-y-5 border border-border"
             >
               <div>
                 <label className="text-sm font-medium text-primary mb-1.5 block">Full Name *</label>
@@ -122,7 +122,7 @@ export default function Consultation() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-10 bg-card rounded-2xl p-8 shadow-sm text-center"
+            className="mt-10 bg-card rounded-lg p-8 shadow-sm text-center border border-border"
           >
             <p className="text-muted-foreground text-sm mb-4">Prefer to reach us directly?</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

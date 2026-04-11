@@ -9,7 +9,7 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ quote, name, relationship, variant = "white" }: TestimonialCardProps) {
   return (
-    <div className={`p-8 rounded-2xl ${variant === "ice" ? "ice-blue-bg" : "bg-card"} shadow-sm`}>
+    <div className={`p-8 rounded-lg border border-border ${variant === "ice" ? "ice-blue-bg" : "bg-card"}`}>
       <Quote size={28} className="text-accent/40 mb-4" />
       <p className="italic text-body leading-relaxed mb-6">{quote}</p>
       <div>

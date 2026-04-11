@@ -17,10 +17,10 @@ const services = [
 ];
 
 const testimonials = [
-  { quote: "Finding the right place for my father was not easy, but Magnify Services Inc. gave us peace of mind from day one. The environment is warm, safe, and welcoming, and the caregivers treat him like family. We finally feel confident he’s in the right hands.", name: "Mrs. Johnson", relationship: "Daughter of Resident" },
+  { quote: "Finding the right place for my father was not easy, but Magnify Services Inc. gave us peace of mind from day one. The environment is warm, safe, and welcoming, and the caregivers treat him like family. We finally feel confident he's in the right hands.", name: "Mrs. Johnson", relationship: "Daughter of Resident" },
   { quote: "Living at Magnify Services has been a blessing. I feel respected, cared for, and supported every day. The staff are patient and kind, and they make this place truly feel like home.", name: "James K", relationship: "Resident" },
-  { quote: "Before Magnify, my sister struggled with consistent care. Since moving here, we’ve seen a complete transformation—she’s happier, healthier, and more engaged. The team genuinely cares, and it shows in everything they do", name: "Angela M", relationship: "Family Member" },
-  { quote: "As a healthcare provider, I’ve worked with several care homes, and Magnify Services Inc. stands out for their professionalism and attention to detail. Their staff are well-trained, attentive, and deeply committed to the well-being of their residents", name: "Dr. Williams", relationship: "Healthcare Patner" },
+  { quote: "Before Magnify, my sister struggled with consistent care. Since moving here, we've seen a complete transformation—she's happier, healthier, and more engaged. The team genuinely cares, and it shows in everything they do", name: "Angela M", relationship: "Family Member" },
+  { quote: "As a healthcare provider, I've worked with several care homes, and Magnify Services Inc. stands out for their professionalism and attention to detail. Their staff are well-trained, attentive, and deeply committed to the well-being of their residents", name: "Dr. Williams", relationship: "Healthcare Patner" },
 ];
 
 export default function Home() {
@@ -35,7 +35,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBg} alt="Magnify Services Inc care facility" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[hsl(213,35%,16%)] via-[hsl(213,35%,16%,0.5)] to-[hsl(213,35%,16%,0.3)]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,22%,6%)] via-[hsl(220,22%,6%,0.6)] to-[hsl(220,22%,6%,0.3)]" />
         </div>
         <div className="relative container text-center z-10 pt-20">
           <motion.h1
@@ -88,7 +88,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <video
-              className="w-full aspect-video rounded-2xl shadow-lg object-cover"
+              className="w-full aspect-video rounded-lg shadow-lg object-cover"
               controls
               preload="metadata"
               poster=""
