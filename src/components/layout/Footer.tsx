@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Linkedin, Send } from "lucide-react";
 import { CONTACT, NAV_LINKS, SERVICES } from "@/lib/constants";
 import { useState } from "react";
-import logo from "@/assets/logo.png";
+import logoWhite from "@/assets/logo-white.png";
 
 function TikTokIcon({ size = 16 }: { size?: number }) {
   return (
@@ -32,9 +32,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <img
-                src={logo}
+                src={logoWhite}
                 alt="Magnify Services Inc logo"
-                className="h-10 w-auto object-contain brightness-0 invert"
+                className="h-12 w-auto object-contain"
               />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">

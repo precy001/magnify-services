@@ -3,7 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@/assets/logo.png";
+import logoPrimary from "@/assets/logo-primary.png";
+import logoWhite from "@/assets/logo-white.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,7 +37,7 @@ export default function Navbar() {
       <nav className="container flex items-center justify-between h-20">
         <Link to="/" className="flex items-center gap-2 group shrink-0">
           <img
-            src={logo}
+            src={scrolled ? logoPrimary : logoWhite}
             alt="Magnify Services Inc logo"
             className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
