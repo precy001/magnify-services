@@ -4,10 +4,16 @@ import service03 from "../assets/service03.jpg";
 import service04 from "../assets/service04.jpg";
 
 export const CONTACT = {
-  phones: ["517-489-2729"],
+  phones: ["517-489-2729", "810-360-8672"],
+  fax: "517-220-2103",
   emails: ["magnifyservicesinc@gmail.com"],
   licenseName: "Magnify Services Inc",
   hours: "Open 24/7 for your convenience",
+  socials: {
+    facebook: "https://www.facebook.com/p/Magnify-Services-Inc-61571672866196/",
+    linkedin: "https://www.linkedin.com/company/magnify-services-inc/",
+    tiktok: "https://www.tiktok.com/@magnify.services",
+  },
   locations: [
     { name: "Magnify AFC", address: "1726 Teel Ave, Lansing MI 48920", lat: 42.7145, lng: -84.5565 },
     { name: "Glorify AFC", address: "1726 Teel Ave, Lansing MI 48910", lat: 42.7145, lng: -84.5565 },

@@ -45,6 +45,7 @@ export default function Contact() {
                         <a href={`tel:${p}`} className="text-body text-sm hover:text-accent transition-colors">{p}</a>
                       </li>
                     ))}
+                    <li className="text-body text-sm">Fax: {CONTACT.fax}</li>
                   </ul>
                 </div>
                 <div>

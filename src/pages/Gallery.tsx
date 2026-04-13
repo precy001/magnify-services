@@ -16,6 +16,13 @@ import facilityImg11 from "@/assets/gallery/b7e273dd-04ad-4bc3-a890-2f3184066043
 import facilityImg12 from "@/assets/gallery/b36c149a-289c-4db1-8f0e-7a876173a731.jpeg";
 import facilityImg13 from "@/assets/gallery/cf9dcbeb-ee22-4d1a-968c-c44cbce545fa.jpeg";
 import facilityImg14 from "@/assets/gallery/f57a0278-337e-4b53-923d-47b807d6f5c1.jpeg";
+import activityImg1 from "@/assets/activities-1.jpg";
+import activityImg2 from "@/assets/activities-2.jpg";
+import activityImg3 from "@/assets/activities-3.jpg";
+import activityImg4 from "@/assets/activities-4.jpg";
+import activityImg5 from "@/assets/activities-5.jpg";
+import activityImg6 from "@/assets/activities-6.jpg";
+import activityImg7 from "@/assets/activities-7.jpg";
 
 const filters = ["All", "Facility", "Activities", "Events", "Programs"];
 
@@ -40,6 +47,13 @@ const galleryItems: GalleryItem[] = [
   { id: 11, category: "Facility", type: "image", src: facilityImg12 },
   { id: 12, category: "Facility", type: "image", src: facilityImg13 },
   { id: 13, category: "Facility", type: "image", src: facilityImg14 },
+  { id: 14, category: "Activities", type: "image", src: activityImg1 },
+  { id: 15, category: "Activities", type: "image", src: activityImg2 },
+  { id: 16, category: "Activities", type: "image", src: activityImg3 },
+  { id: 17, category: "Activities", type: "image", src: activityImg4 },
+  { id: 18, category: "Activities", type: "image", src: activityImg5 },
+  { id: 19, category: "Activities", type: "image", src: activityImg6 },
+  { id: 20, category: "Activities", type: "image", src: activityImg7 },
 ];
 
 export default function Gallery() {

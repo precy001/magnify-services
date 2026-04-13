@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import SectionHero from "@/components/sections/SectionHero";
-import ImagePlaceholder from "@/components/sections/ImagePlaceholder";
 import CTABanner from "@/components/sections/CTABanner";
+import aboutImg1 from "@/assets/activities-2.jpg";
+import aboutImg2 from "@/assets/activities-6.jpg";
 import { CheckCircle, Heart, Shield, Eye, Users, Award, Star } from "lucide-react";
 
 const values = [
@@ -68,8 +69,8 @@ export default function About() {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="space-y-6"
             >
-              <ImagePlaceholder aspect="aspect-[4/3]" />
-              <ImagePlaceholder aspect="aspect-[4/3]" />
+              <img src={aboutImg1} alt="Residents sharing memories" className="aspect-[4/3] w-full object-cover rounded-lg" />
+              <img src={aboutImg2} alt="Caregiver and resident playing cards" className="aspect-[4/3] w-full object-cover rounded-lg" />
             </motion.div>
           </div>
         </div>

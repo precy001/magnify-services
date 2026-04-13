@@ -62,7 +62,7 @@ export default function Services() {
                       ))}
                     </ul>
                     <Link to="/consultation" className="btn-primary">
-                      Book a Consultation
+                      Book a Visit
                     </Link>
                   </motion.div>
                 </div>
@@ -75,7 +75,7 @@ export default function Services() {
 
       <CTABanner
         title="Not sure which service fits? Let's talk."
-        primaryLabel="Book a Consultation"
+        primaryLabel="Book a Visit"
         primaryHref="/consultation"
         secondaryLabel="Contact Us"
         secondaryHref="/contact"

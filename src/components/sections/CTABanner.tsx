@@ -12,7 +12,7 @@ interface CTABannerProps {
 
 export default function CTABanner({
   title = "Ready to Find the Right Care for Your Loved One?",
-  primaryLabel = "Book Consultation",
+  primaryLabel = "Book a Visit",
   primaryHref = "/consultation",
   secondaryLabel = "Make a Donation",
   secondaryHref = "/donate",

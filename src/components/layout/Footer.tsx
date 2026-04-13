@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Linkedin, Send } from "lucide-react";
 import { CONTACT, NAV_LINKS, SERVICES } from "@/lib/constants";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
+
+function TikTokIcon({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1 0-5.78 2.92 2.92 0 0 1 .88.13V9.01a6.34 6.34 0 0 0-.88-.07 6.34 6.34 0 0 0 0 12.68 6.34 6.34 0 0 0 6.34-6.34V9.41a8.16 8.16 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.84z" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -33,21 +41,33 @@ export default function Footer() {
               Providing specialized adult foster care for individuals who deserve comfort, respect, and a place to call home.
             </p>
             <div className="flex gap-3">
-              {[
-                { Icon: Facebook, label: "Facebook" },
-                { Icon: Twitter, label: "Twitter" },
-                { Icon: Instagram, label: "Instagram" },
-                { Icon: Linkedin, label: "LinkedIn" },
-              ].map(({ Icon, label }) => (
-                <a
-                  key={label}
-                  href="#"
-                  className="w-9 h-9 rounded-md bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-300"
-                  aria-label={label}
-                >
-                  <Icon size={16} />
-                </a>
-              ))}
+              <a
+                href={CONTACT.socials.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-md bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-300"
+                aria-label="Facebook"
+              >
+                <Facebook size={16} />
+              </a>
+              <a
+                href={CONTACT.socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-md bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-300"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={16} />
+              </a>
+              <a
+                href={CONTACT.socials.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-md bg-white/10 flex items-center justify-center hover:bg-accent transition-colors duration-300"
+                aria-label="TikTok"
+              >
+                <TikTokIcon size={16} />
+              </a>
             </div>
           </div>
 
@@ -89,13 +109,17 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold text-sm mb-6">Contact</h4>
             <ul className="space-y-3 mb-8">
-              {CONTACT.phones.slice(0, 2).map((p) => (
+              {CONTACT.phones.map((p) => (
                 <li key={p} className="flex items-center gap-2 text-white/60 text-sm">
                   <Phone size={14} className="text-accent shrink-0" />
                   <a href={`tel:${p}`} className="hover:text-accent transition-colors">{p}</a>
                 </li>
               ))}
-              {CONTACT.emails.slice(0, 1).map((e) => (
+              <li className="flex items-center gap-2 text-white/60 text-sm">
+                <Phone size={14} className="text-accent shrink-0" />
+                <span>Fax: {CONTACT.fax}</span>
+              </li>
+              {CONTACT.emails.map((e) => (
                 <li key={e} className="flex items-center gap-2 text-white/60 text-sm">
                   <Mail size={14} className="text-accent shrink-0" />
                   <a href={`mailto:${e}`} className="hover:text-accent transition-colors break-all">{e}</a>

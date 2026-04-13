@@ -4,7 +4,7 @@ import SectionHero from "@/components/sections/SectionHero";
 import StatsCounter from "@/components/sections/StatsCounter";
 import ProjectCard from "@/components/cards/ProjectCard";
 import CTABanner from "@/components/sections/CTABanner";
-import ImagePlaceholder from "@/components/sections/ImagePlaceholder";
+import communityImg from "@/assets/activities-5.jpg";
 
 const projects = [
   { title: "Community Wellness Initiative", category: "Community Programs", description: "A comprehensive wellness program bringing health screenings and wellness education to underserved communities." },
@@ -117,7 +117,7 @@ export default function Projects() {
               animate={communityAnim.isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.1 }}
             >
-              <ImagePlaceholder aspect="aspect-[4/3]" />
+              <img src={communityImg} alt="Community activities" className="aspect-[4/3] w-full object-cover rounded-lg" />
             </motion.div>
           </div>
         </div>
