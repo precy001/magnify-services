@@ -6,8 +6,9 @@ import ServiceCard from "@/components/cards/ServiceCard";
 import TestimonialCard from "@/components/cards/TestimonialCard";
 import StatsCounter from "@/components/sections/StatsCounter";
 import CTABanner from "@/components/sections/CTABanner";
-import ImagePlaceholder from "@/components/sections/ImagePlaceholder";
 import heroBg from "@/assets/hero-bg.jpg";
+import missionImg from "@/assets/activities-3.jpg";
+import visionImg from "@/assets/activities-4.jpg";
 
 const services = [
   { icon: Heart, title: "Developmentally Disabled Adults", description: "Personalized daily living assistance and community integration for individuals with developmental disabilities." },
@@ -62,7 +63,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link to="/consultation" className="btn-primary text-base">
-              Book a Consultation
+              Book a Visit
             </Link>
             <Link to="/services" className="btn-outline-white text-base">
               Learn About Our Services
@@ -135,7 +136,7 @@ export default function Home() {
               animate={missionAnim.isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7 }}
             >
-              <ImagePlaceholder />
+              <img src={missionImg} alt="Caregiver assisting resident" className="w-full aspect-video rounded-lg object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 30 }}
@@ -171,7 +172,7 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="order-1 md:order-2"
             >
-              <ImagePlaceholder />
+              <img src={visionImg} alt="Residents enjoying activities" className="w-full aspect-video rounded-lg object-cover" />
             </motion.div>
           </div>
         </div>

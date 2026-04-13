@@ -61,7 +61,7 @@ export default function Navbar() {
 
         <div className="hidden lg:flex items-center gap-3">
           <Link to="/consultation" className="btn-outline text-sm !px-6 !py-2.5">
-            Book Consultation
+            Book a Visit
           </Link>
           <Link to="/donate" className="btn-primary text-sm !px-6 !py-2.5">
             Donate
@@ -113,7 +113,7 @@ export default function Navbar() {
                 className="flex flex-col gap-3 w-full max-w-xs mt-4"
               >
                 <Link to="/consultation" className="btn-outline text-center">
-                  Book Consultation
+                  Book a Visit
                 </Link>
                 <Link to="/donate" className="btn-primary text-center">
                   Donate
