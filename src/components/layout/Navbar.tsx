@@ -87,20 +87,22 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-20 bg-background/98 backdrop-blur-lg z-40 lg:hidden"
+            className="fixed inset-0 top-20 bg-background z-40 lg:hidden overflow-y-auto"
           >
-            <div className="container flex flex-col items-center pt-12 gap-6">
+            <nav className="flex flex-col px-6 pt-6 pb-10 gap-1">
               {NAV_LINKS.map((link, i) => (
                 <motion.div
                   key={link.href}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.06, duration: 0.4 }}
+                  initial={{ opacity: 0, x: -16 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.04, duration: 0.3 }}
                 >
                   <Link
                     to={link.href}
-                    className={`text-xl font-medium transition-colors ${
-                      location.pathname === link.href ? "text-accent" : "text-primary"
+                    className={`block py-3 px-4 rounded-md text-base font-medium transition-colors ${
+                      location.pathname === link.href
+                        ? "text-accent bg-accent/10"
+                        : "text-foreground hover:bg-muted"
                     }`}
                   >
                     {link.label}
@@ -108,19 +110,19 @@ export default function Navbar() {
                 </motion.div>
               ))}
               <motion.div
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.4 }}
-                className="flex flex-col gap-3 w-full max-w-xs mt-4"
+                transition={{ delay: 0.3, duration: 0.3 }}
+                className="flex flex-col gap-3 mt-6 px-4"
               >
-                <Link to="/consultation" className="btn-outline text-center">
+                <Link to="/consultation" className="btn-outline text-center text-sm">
                   Book a Visit
                 </Link>
-                <Link to="/donate" className="btn-primary text-center">
+                <Link to="/donate" className="btn-primary text-center text-sm">
                   Donate
                 </Link>
               </motion.div>
-            </div>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>

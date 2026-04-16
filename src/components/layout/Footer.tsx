@@ -128,7 +128,14 @@ export default function Footer() {
               {CONTACT.locations.map((loc) => (
                 <li key={loc.name} className="flex items-start gap-2 text-white/60 text-sm">
                   <MapPin size={14} className="text-accent shrink-0 mt-0.5" />
-                  <span><span className="text-white/80 font-medium">{loc.name}</span> — {loc.address}</span>
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.address)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    <span className="text-white/80 font-medium">{loc.name}</span> — {loc.address}
+                  </a>
                 </li>
               ))}
             </ul>
