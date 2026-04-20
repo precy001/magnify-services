@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
     },
     proxy: {
   "/api": {
-    target: "http://localhost/magnify-care-connect",  // ← XAMPP URL
+    target: "https://magnifyservicesinc.com",  // ← XAMPP URL
     changeOrigin: true,
   },
 },

@@ -1,10 +1,10 @@
 <?php
 // Database connection — edit these values to match your setup.
 // XAMPP defaults: user "root" with an empty password.
-$DB_HOST = '127.0.0.1';
-$DB_NAME = 'magnify_services';
-$DB_USER = 'root';
-$DB_PASS = '';
+$DB_HOST = 'localhost';
+$DB_NAME = 'magnify2_contact';
+$DB_USER = 'magnify2_contact';
+$DB_PASS = 'Ultimate))@@#';
 
 try {
     $pdo = new PDO(
