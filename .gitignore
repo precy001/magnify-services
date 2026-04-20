@@ -24,11 +24,6 @@ dist-ssr
 *.sw?
 
 # PHP backend
-/data/*.db
-/data/*.db-journal
-/data/*.db-wal
-/data/*.db-shm
-/vendor/
 .env
 .env.local
 *.zip
