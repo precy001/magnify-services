@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { CheckCircle, Phone, Mail } from "lucide-react";
@@ -23,9 +24,30 @@ export default function Consultation() {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) setSubmitted(true);
+    if (!validate() || submitting) return;
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/consultation.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (res.ok && data.ok) {
+        setSubmitted(true);
+        setForm({ name: "", email: "", phone: "", date: "", time: "", service: "", message: "" });
+      } else {
+        alert(data.error || "Something went wrong. Please try again.");
+      }
+    } catch {
+      alert("Unable to reach the server. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const update = (field: string, value: string) => {
@@ -112,8 +134,8 @@ export default function Consultation() {
                 <label className="text-sm font-medium text-primary mb-1.5 block">Message / Additional Notes</label>
                 <textarea className={`${inputClass("message")} min-h-[120px] resize-y`} value={form.message} onChange={(e) => update("message", e.target.value)} placeholder="Tell us about your needs..." />
               </div>
-              <button type="submit" className="btn-primary w-full text-base !py-4">
-                Request Consultation
+              <button type="submit" disabled={submitting} className="btn-primary w-full text-base !py-4 disabled:opacity-60 disabled:cursor-not-allowed">
+                {submitting ? "Sending…" : "Request Consultation"}
               </button>
             </motion.form>
           )}

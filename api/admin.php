@@ -1,10 +1,17 @@
 <?php
 // Admin API — all endpoints:
-//   POST   ?action=login     { username, password }   -> logs in, starts session
-//   POST   ?action=logout                              -> destroys session
-//   GET    ?action=me                                  -> returns current user or 401
-//   GET    ?action=list                                -> returns all submissions
-//   POST   ?action=delete    { id }                    -> deletes one submission
+//   POST   ?action=login              { username, password }   -> logs in, starts session
+//   POST   ?action=logout                                       -> destroys session
+//   GET    ?action=me                                           -> returns current user or 401
+//
+//   GET    ?action=list_contacts                                -> all contact-form submissions
+//   POST   ?action=delete_contact     { id }                    -> delete one contact message
+//
+//   GET    ?action=list_consultations                           -> all book-a-visit requests
+//   POST   ?action=delete_consultation           { id }         -> delete one request
+//   POST   ?action=update_consultation_status    { id, status } -> pending|confirmed|completed|cancelled
+//
+// `list` and `delete` are kept as aliases for list_contacts / delete_contact.
 require __DIR__ . '/db.php';
 
 session_start();
@@ -71,7 +78,8 @@ switch ($action) {
         break;
     }
 
-    case 'list': {
+    case 'list':          // alias
+    case 'list_contacts': {
         global $pdo;
         require_login();
         $rows = $pdo->query(
@@ -83,7 +91,8 @@ switch ($action) {
         break;
     }
 
-    case 'delete': {
+    case 'delete':          // alias
+    case 'delete_contact': {
         global $pdo;
         require_login();
         $id = (int) (input()['id'] ?? 0);
@@ -93,6 +102,51 @@ switch ($action) {
             exit;
         }
         $pdo->prepare('DELETE FROM contact_submissions WHERE id = ?')->execute([$id]);
+        echo json_encode(['ok' => true]);
+        break;
+    }
+
+    case 'list_consultations': {
+        global $pdo;
+        require_login();
+        $rows = $pdo->query(
+            'SELECT id, name, email, phone, preferred_date, preferred_time,
+                    service, message, status, created_at
+             FROM consultation_requests
+             ORDER BY created_at DESC, id DESC'
+        )->fetchAll();
+        echo json_encode(['ok' => true, 'consultations' => $rows]);
+        break;
+    }
+
+    case 'delete_consultation': {
+        global $pdo;
+        require_login();
+        $id = (int) (input()['id'] ?? 0);
+        if ($id <= 0) {
+            http_response_code(400);
+            echo json_encode(['ok' => false, 'error' => 'Invalid id']);
+            exit;
+        }
+        $pdo->prepare('DELETE FROM consultation_requests WHERE id = ?')->execute([$id]);
+        echo json_encode(['ok' => true]);
+        break;
+    }
+
+    case 'update_consultation_status': {
+        global $pdo;
+        require_login();
+        $in = input();
+        $id = (int) ($in['id'] ?? 0);
+        $status = trim((string) ($in['status'] ?? ''));
+        $allowed = ['pending', 'confirmed', 'completed', 'cancelled'];
+        if ($id <= 0 || !in_array($status, $allowed, true)) {
+            http_response_code(400);
+            echo json_encode(['ok' => false, 'error' => 'Invalid id or status']);
+            exit;
+        }
+        $pdo->prepare('UPDATE consultation_requests SET status = ? WHERE id = ?')
+            ->execute([$status, $id]);
         echo json_encode(['ok' => true]);
         break;
     }
